@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompoRep</title>
+    <link rel="icon" href="./img/favicon.ico"/>
+    
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav container">
+            <a href="#" class="logo"><span>Compo</span>Rep</a>
+
+            <div class="menu">
+                <ul>
+                    <li class="seleccionado"><a href="./index.html">Tienda</a></li>
+                    <li><a href="./sobremi.html">Sobre mi</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./mas.html">Más</a></li>
+                </ul>
+    
+                <div class="clear"></div>
+            </div>
+
+            <i class="bx bx-shopping-bag" id="cart-icon"></i>
+
+            <div class="cart">
+                <h2 class="cart-title">Tu Carrito</h2>
+
+                <div class="cart-content">
+
+                </div>
+
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>    
+                </div>
+
+                <button type="button" class="btn-buy">Comprar Ahora</button>
+
+                <i class="bx bx-x" id="cart-close"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="shop container">
+        <h2 class="section-title">Nuestos Productos</h2>
+        <br>
+        <h2 class="section-title">Procesadores</h2>
+
+        <div class="shop-content">
+
+            <div class="product-box">
+                <img src="img/Proce1.jpg" alt="" class="product-img">
+                <h2 class="product-title">Procesador AMD Ryzen 5 5600X</h2>
+                <span class="product-price">$2529.50</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/Proce2.jpg" alt="" class="product-img">
+                <h2 class="product-title">Procesador Intel Core i5-11600K</h2>
+                <span class="product-price">$3819.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+
+            <div class="product-box">
+                <img src="img/Proce3.jpg" alt="" class="product-img">
+                <h2 class="product-title">Procesador AMD Ryzen 9 7900X3D</h2>
+                <span class="product-price">$7769.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+        </div>
+        
+        <br><br>
+        <h2 class="section-title">Tarjetas Madre</h2>
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="img/Madre1.jpg" alt="" class="product-img">
+                <h2 class="product-title">Tarjeta Madre ASUS Micro-ATX PRIME A620M</h2>
+                <span class="product-price">$2149.50</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="img/Madre2.jpg" alt="" class="product-img">
+                <h2 class="product-title">Tarjeta Madre MSI ATX MPG B650 EDGE</h2>
+                <span class="product-price">$5009.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="img/Madre3.jpg" alt="" class="product-img">
+                <h2 class="product-title">Tarjeta Madre ASUS ATX ROG STRIX B650E-E GAMING</h2>
+                <span class="product-price">$6349.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+        </div>
+
+        <br><br>
+        <h2 class="section-title">Ram</h2>
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="img/Ram1.jpg" alt="" class="product-img">
+                <h2 class="product-title">Kit Memoria RAM Kingston FURY Beast RGB DDR5, 6000MHz, 32GB (2 x 16GB)</h2>
+                <span class="product-price">$2519.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="img/Ram2.jpg" alt="" class="product-img">
+                <h2 class="product-title">Memoria RAM XPG Lancer RGB DDR5, 5200MHz, 16GB</h2>
+                <span class="product-price">$1009.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="img/Ram3.jpg" alt="" class="product-img">
+                <h2 class="product-title">Memoria RAM Kingston ValueRAM DDR5, 4800MHz, 32GB</h2>
+                <span class="product-price">$1749.50</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+        </div>
+
+        <br><br>
+        <h2 class="section-title">Tarjetas Graficas</h2>
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="img/Tarjeta1.jpg" alt="" class="product-img">
+                <h2 class="product-title">Tarjeta de Video MSI NVIDIA GeForce RTX 4070 VENTUS 2X 12G OC</h2>
+                <span class="product-price">$10189.50</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="img/Tarjeta2.jpg" alt="" class="product-img">
+                <h2 class="product-title">Tarjeta de Video ASRock AMD Radeon RX 6500 XT Phantom Gaming D OC, 4GB</h2>
+                <span class="product-price">$2649.50</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="img/Tarjeta3.jpg" alt="" class="product-img">
+                <h2 class="product-title">Tarjeta de Video ASUS NVIDIA GeForce RTX 3060 V2 Phoenix OC, 12GB</h2>
+                <span class="product-price">$4299.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+        </div>
+
+        <br><br>
+        <h2 class="section-title">Almacenamiento</h2>
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="img/Alma1.jpg" alt="" class="product-img">
+                <h2 class="product-title">SSD Kingston KC3000 NVMe, 2048GB</h2>
+                <span class="product-price">$2749.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="img/Alma2.jpg" alt="" class="product-img">
+                <h2 class="product-title">SSD Western Digital WD Blue SA510, 1TB</h2>
+                <span class="product-price">$1339.50</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="img/Alma3.jpg" alt="" class="product-img">
+                <h2 class="product-title">SSD Adata Legend 800 NVMe, 2TB, PCI Express 4.0, M.2</h2>
+                <span class="product-price">$1969.50</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+        </div>
+
+        <br><br>
+        <h2 class="section-title">Fuentes de Poder</h2>
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="img/Fuente1.jpg" alt="" class="product-img">
+                <h2 class="product-title">Fuente de Poder XPG Cybercore 80 PLUS Platinum, 1000W</h2>
+                <span class="product-price">$2229.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="img/Fuente2.jpg" alt="" class="product-img">
+                <h2 class="product-title">Fuente de Poder ASUS ROG THOR 1000W Platinum II 80 Plus Platinum</h2>
+                <span class="product-price">$5359.50</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="img/Fuente3.jpg" alt="" class="product-img">
+                <h2 class="product-title">Fuente de Poder Corsair RM750e 80 PLUS Gold, 750W</h2>
+                <span class="product-price">$1619.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+        </div>
+
+        <br><br>
+        <h2 class="section-title">Gabinetes</h2>
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="img/Gabi1.jpg" alt="" class="product-img">
+                <h2 class="product-title">Gabinete ASUS TUF Gaming GT502 con Ventana, Midi-Tower, ATX/Micro-ATX/Mini-ITX</h2>
+                <span class="product-price">$3269.50</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="img/Gabi2.jpg" alt="" class="product-img">
+                <h2 class="product-title">Gabinete Balam Rush Tank Pro GM930 Legend Series con Ventana RGB, Midi-Tower, Micro-ATX/Mini-ITX</h2>
+                <span class="product-price">$1099.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="img/Gabi3.jpg" alt="" class="product-img">
+                <h2 class="product-title">Gabinete Corsair 4000D Airflow con Ventana, Midi-Tower, ATX</h2>
+                <span class="product-price">$1359.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompoRep</title>
+    <link rel="icon" href="./img/favicon.ico"/>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <a href="#" class="logo"><span>Compo</span>Rep</a>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="./index.html">Tienda</a></li>
+                    <li><a href="./sobremi.html">Sobre mi</a></li>
+                    <li class="seleccionado"><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./mas.html">Más</a></li>
+                </ul>
+    
+                <div class="clear"></div>
+            </div>
+        </div>
+        <section class="shop container">
+            <a href="https://www.facebook.com/tuPerfil" target="_blank">
+                <img src="./img/FB_logo.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://www.x.com/tuPerfil" target="_blank">
+                <img src="./img/X_logo.png" alt="Twitter" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/tuPerfil" target="_blank">
+                <img src="./img/Insta_logo.png" alt="Instagram" class="social-icon">
+            </a>
+            
+        
+        
+        <h1>Encuentranos</h1>
+
+        <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Crear el mapa
+            var map = L.map('map').fitWorld();
+
+            // Intentar obtener la ubicación del usuario
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        // Coordenadas del usuario
+                        var userLat = position.coords.latitude;
+                        var userLng = position.coords.longitude;
+
+                        // Configurar el mapa centrado en la ubicación del usuario
+                        map.setView([userLat, userLng], 15);
+
+                        // Añadir un marcador en la ubicación del usuario
+                        
+
+                        L.marker([20.110351, -98.739383]).addTo(map)
+                            .bindPopup('Tienda CompoRep')
+                            .openPopup();
+
+                        L.marker([20.073040, -98.735891]).addTo(map)
+                            .bindPopup('Distribuidor Oficial CompoRep')
+                            .openPopup();
+
+                        L.marker([userLat, userLng]).addTo(map)
+                            .bindPopup('Estás aquí')
+                            .openPopup();
+
+                        // Añadir capa de mapa (puedes cambiar la URL si deseas otro estilo de mapa)
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            maxZoom: 19,
+                            attribution: '© OpenStreetMap'
+                        }).addTo(map);
+                    },
+                    function() {
+                        alert('No se pudo obtener la ubicación.');
+                    }
+                );
+            } else {
+                alert('Tu navegador no soporta geolocalización.');
+            }
+        });
+    </script>
+    </section>
+    </header>
+    
+</body>

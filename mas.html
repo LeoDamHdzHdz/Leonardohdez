@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompoRep</title>
+    <link rel="icon" href="./img/favicon.ico"/>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (localStorage.visits) {
+                localStorage.visits = Number(localStorage.visits) + 1;
+            } else {
+                localStorage.visits = 1;
+            }
+            document.getElementById('visitCount').innerText = localStorage.visits;
+        });
+    </script>
+    
+    <script>
+        function updateDateTime() {
+            var now = new Date();
+            var day = now.getDate();
+            var month = now.getMonth() + 1; // Los meses son de 0 a 11
+            var year = now.getFullYear();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            // Asegurarse de que los números tengan dos dígitos
+            if (day < 10) day = '0' + day;
+            if (month < 10) month = '0' + month;
+            if (hours < 10) hours = '0' + hours;
+            if (minutes < 10) minutes = '0' + minutes;
+            if (seconds < 10) seconds = '0' + seconds;
+
+            var date = day + '/' + month + '/' + year;
+            var time = hours + ':' + minutes + ':' + seconds;
+
+            document.getElementById('date').innerText = date;
+            document.getElementById('time').innerText = time;
+        }
+        setInterval(updateDateTime, 1000);
+    </script>
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <a href="#" class="logo"><span>Compo</span>Rep</a>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="./index.html">Tienda</a></li>
+                    <li><a href="./sobremi.html">Sobre mi</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li class="seleccionado"><a href="./mas.html">Más</a></li>
+                </ul>
+    
+                <div class="clear">
+                    
+                </div>
+            </div>
+            
+        </div>
+        <section class="shop container">
+            <p>Has visitado esta página <span id="visitCount"></span> veces.</p>
+            <br>
+            <h1>Fecha y Hora Actual</h1>
+            <p>Fecha: <span id="date"></span></p>
+            <p>Hora: <span id="time"></span></p>
+            <br>
+            <br>
+            <p>Ya estoy cansado son las 2:44am y sigo aqui haciendo su proyecto yo digo que ya acabe y ya me voy a dormir que me tengo que levantar a las 7 de la mañana :)</p>
+            
+        </section>
+        <div class="hola"><img src="./img/Gif.gif" alt="GIF divertido" width="250px" height="700px"></div>
+    </header>
+    
+</body>
